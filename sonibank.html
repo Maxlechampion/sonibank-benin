@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SONIBANK BÉNIN — L'alliée de votre réussite</title>
+    <meta name="description" content="SONIBANK Bénin, succursale de la Société Nigérienne de Banque. Banque citoyenne et leader au Niger, implantée au Bénin depuis 2018. Comptes, crédits, cartes, e-banking et conseils personnalisés." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #0B6E99;
+            --primary-dark: #084A6B;
+            --primary-light: #4A9BC7;
+            --primary-lighter: #D4E9F7;
+            --primary-pale: #F0F8FF;
+            --secondary: #F5A623;
+            --secondary-light: #FFC857;
+            --white: #FFFFFF;
+            --text-dark: #1A2A3A;
+            --text-light: #5A6E7E;
+            --bg: #F8FAFC;
+            --shadow: 0 20px 60px rgba(11, 110, 153, 0.12);
+            --shadow-sm: 0 4px 20px rgba(11, 110, 153, 0.06);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --nav-height: 80px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(245, 166, 35, 0.50);
+            background: var(--secondary-light);
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.10);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(11, 110, 153, 0.25);
+            background: var(--primary-dark);
+        }
+
+        /* ===== HEADER & NAV ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 74, 107, 0.97);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+        }
+        header.scrolled {
+            background: rgba(8, 74, 107, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+        .logo .highlight {
+            color: var(--secondary);
+        }
+        .logo .sub {
+            font-size: 0.55rem;
+            font-weight: 400;
+            opacity: 0.6;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: -4px;
+        }
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav-links>li {
+            position: relative;
+        }
+        .nav-links>li>a {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            display: inline-block;
+            position: relative;
+        }
+        .nav-links>li>a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+        .nav-links>li>a:hover {
+            color: var(--white);
+        }
+        .nav-links>li>a:hover::after {
+            width: 100%;
+        }
+        .nav-links>li>a .fa-chevron-down {
+            font-size: 0.6rem;
+            margin-left: 4px;
+            opacity: 0.5;
+        }
+
+        .nav-cta {
+            background: var(--secondary);
+            color: var(--primary-dark) !important;
+            padding: 8px 22px !important;
+            border-radius: 50px;
+            font-weight: 700 !important;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .nav-cta:hover {
+            background: var(--secondary-light) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        /* Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius-sm);
+            padding: 12px 0;
+            z-index: 100;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        .dropdown-content li a {
+            color: var(--text-dark);
+            padding: 8px 20px;
+            display: block;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .dropdown-content li a:hover {
+            background: var(--primary-pale);
+            color: var(--primary);
+        }
+        .nav-links>li:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2.5px;
+            background: var(--white);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .brand-banner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .brand-banner .brand-name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 4px;
+            line-height: 1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .brand-banner .brand-slogan {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 2px;
+            margin-top: 4px;
+            text-shadow: 0 2px 10px rgba(245, 166, 35, 0.2);
+            position: relative;
+            padding-left: 20px;
+        }
+        .brand-banner .brand-slogan::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 70%;
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+        .brand-banner .brand-sub {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 3px;
+            margin-top: 6px;
+            text-transform: uppercase;
+            border-top: 2px solid rgba(255, 255, 255, 0.08);
+            padding-top: 10px;
+        }
+        .hero-content p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 480px;
+            margin-bottom: 36px;
+            line-height: 1.8;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .hero-stats .stat p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+        }
+        .hero-card .card-title {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .hero-card .card-sub {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+        .hero-card .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+        .hero-card .feature-row:last-child {
+            border-bottom: none;
+        }
+        .hero-card .feature-row i {
+            color: var(--secondary);
+            width: 20px;
+        }
+        .hero-card .card-cta {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* ===== SECTIONS GLOBAL ===== */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .section-title h2 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+        .section-title h2 span {
+            color: var(--secondary);
+        }
+        .section-title p {
+            color: var(--text-light);
+            max-width: 620px;
+            margin: 12px auto 0;
+            font-size: 1.05rem;
+        }
+        .bg-pale {
+            background: var(--primary-pale);
+        }
+        .bg-white {
+            background: var(--white);
+        }
+
+        /* ===== ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-image .img-placeholder {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: var(--radius);
+            padding: 60px 40px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-image .img-placeholder::before {
+            content: '🏦';
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            font-size: 12rem;
+            opacity: 0.06;
+        }
+        .about-image .img-placeholder h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .about-image .img-placeholder p {
+            opacity: 0.8;
+            max-width: 300px;
+        }
+        .about-image .floating-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--white);
+            padding: 20px 28px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .about-image .floating-badge .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+        .about-image .floating-badge .label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .about-text h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+        .about-text h2 span {
+            color: var(--secondary);
+        }
+        .about-text .highlight-text {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.02rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+        .about-features li i {
+            color: var(--secondary);
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 36px 28px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: rgba(11, 110, 153, 0.10);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-card .icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary-pale);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== CARDS TABLE ===== */
+        .cards-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .cards-table th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .cards-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .cards-table tr:last-child td {
+            border-bottom: none;
+        }
+        .cards-table tr:hover td {
+            background: var(--primary-pale);
+        }
+        .cards-table .badge {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        /* ===== NETWORK ===== */
+        .network-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .network-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .network-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .network-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+        .network-card h3 i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        .network-card ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+        .network-card ul li:last-child {
+            border-bottom: none;
+        }
+        .network-card .highlight {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+        .contact-info .detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        .contact-info .detail i {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-pale);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .contact-info .detail .text {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        .contact-info .detail .sub {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-form h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--primary-dark);
+        }
+        .contact-form .form-group {
+            margin-bottom: 18px;
+        }
+        .contact-form label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--bg);
+            color: var(--text-dark);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(11, 110, 153, 0.08);
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-brand .logo {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .footer-brand .logo .sub {
+            font-size: 0.65rem;
+            opacity: 0.5;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            max-width: 280px;
+            line-height: 1.7;
+        }
+        .footer-col h5 {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+        }
+        .footer-bottom {
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+        }
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer-socials a:hover {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+
+        /* ===== CHATBOT ===== */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 999;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: none;
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(245, 166, 35, 0.35);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chatbot-toggle:hover {
+            transform: scale(1.06);
+            box-shadow: 0 12px 40px rgba(245, 166, 35, 0.50);
+        }
+        .chatbot-toggle .badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 20px;
+            height: 20px;
+            background: #ef4444;
+            border-radius: 50%;
+            font-size: 0.6rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .chatbot-window {
+            position: fixed;
+            bottom: 110px;
+            right: 32px;
+            z-index: 998;
+            width: 400px;
+            max-width: calc(100vw - 64px);
+            height: 520px;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.20);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+        .chatbot-window.open {
+            display: flex;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .chatbot-header {
+            background: var(--primary);
+            padding: 18px 24px;
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .chatbot-header .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .chatbot-header .left .avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        .chatbot-header .left .info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .chatbot-header .left .info p {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+        .chatbot-header .close-btn {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .chatbot-header .close-btn:hover {
+            color: var(--white);
+        }
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px 24px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #f8fafc;
+        }
+        .chatbot-messages .msg {
+            max-width: 85%;
+            padding: 12px 18px;
+            border-radius: 14px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            animation: msgIn 0.25s ease;
+        }
+        @keyframes msgIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .chatbot-messages .msg.bot {
+            background: var(--white);
+            color: var(--text-dark);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        .chatbot-messages .msg.bot .typing-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+        .chatbot-messages .msg.bot .typing-dots span {
+            width: 6px;
+            height: 6px;
+            background: var(--text-light);
+            border-radius: 50%;
+            animation: dotPulse 1.2s infinite;
+        }
+        .chatbot-messages .msg.bot .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .chatbot-messages .msg.bot .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes dotPulse {
+            0%,
+            80%,
+            100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            40% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .chatbot-messages .msg.user {
+            background: var(--primary);
+            color: var(--white);
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .chatbot-messages .msg .time {
+            font-size: 0.65rem;
+            opacity: 0.5;
+            margin-top: 4px;
+            display: block;
+        }
+        .chatbot-messages .msg.user .time {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .chatbot-messages .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 4px;
+            align-self: flex-start;
+            max-width: 100%;
+        }
+        .chatbot-messages .quick-replies .qr-btn {
+            background: var(--primary-pale);
+            border: 1px solid rgba(11, 110, 153, 0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .chatbot-messages .quick-replies .qr-btn:hover {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            border-color: var(--secondary);
+        }
+        .chatbot-input {
+            padding: 16px 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 12px;
+            background: var(--white);
+            flex-shrink: 0;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: var(--bg);
+        }
+        .chatbot-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(11, 110, 153, 0.08);
+        }
+        .chatbot-input button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chatbot-input button:hover {
+            background: var(--secondary-light);
+            transform: scale(1.04);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .brand-banner {
+                align-items: center;
+            }
+            .brand-banner .brand-slogan {
+                padding-left: 0;
+            }
+            .brand-banner .brand-slogan::before {
+                display: none;
+            }
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-card {
+                max-width: 100%;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .network-grid {
+                grid-template-columns: 1fr;
+            }
+            .dropdown-content {
+                position: static;
+                background: transparent;
+                box-shadow: none;
+                padding: 8px 0 8px 16px;
+                border: none;
+                display: none;
+            }
+            .nav-links>li:hover .dropdown-content {
+                display: none;
+            }
+            .nav-links>li.open .dropdown-content {
+                display: block;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                background: var(--primary-dark);
+                padding: 20px 24px;
+                gap: 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.06);
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .brand-banner .brand-name {
+                font-size: 3rem;
+            }
+            .brand-banner .brand-slogan {
+                font-size: 1.5rem;
+            }
+            .brand-banner .brand-sub {
+                font-size: 0.8rem;
+            }
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+            .hero-stats .stat h3 {
+                font-size: 1.6rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            .chatbot-window {
+                right: 16px;
+                left: 16px;
+                max-width: none;
+                width: auto;
+                height: 480px;
+                bottom: 100px;
+            }
+            .chatbot-toggle {
+                bottom: 20px;
+                right: 20px;
+                width: 56px;
+                height: 56px;
+                font-size: 1.5rem;
+            }
+            .cards-table {
+                font-size: 0.85rem;
+            }
+            .cards-table th,
+            .cards-table td {
+                padding: 10px 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .brand-banner .brand-name {
+                font-size: 2.4rem;
+            }
+            .brand-banner .brand-slogan {
+                font-size: 1.2rem;
+            }
+            .brand-banner .brand-sub {
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .contact-form {
+                padding: 24px;
+            }
+            .hero-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">S</span>
+                    <div>
+                        SONI<span class="highlight">BANK</span>
+                        <span class="sub">BÉNIN · L'ALLIÉE DE VOTRE RÉUSSITE</span>
+                    </div>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <!-- SONIBANK dropdown -->
+                    <li>
+                        <a href="#about">SONIBANK <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#about">Qui sommes-nous ?</a></li>
+                            <li><a href="#director">Mot du Directeur Général</a></li>
+                            <li><a href="#vision">Vision, missions & valeurs</a></li>
+                            <li><a href="#governance">Gouvernance</a></li>
+                            <li><a href="#succursale">Succursale (Bénin)</a></li>
+                        </ul>
+                    </li>
+                    <!-- Produits & Services dropdown -->
+                    <li>
+                        <a href="#services">Produits & Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#services">Comptes & Épargne</a></li>
+                            <li><a href="#services">Crédits</a></li>
+                            <li><a href="#cards">Cartes bancaires</a></li>
+                            <li><a href="#ebanking">e-Banking</a></li>
+                            <li><a href="#services">Transferts & Garanties</a></li>
+                            <li><a href="#services">Bancassurance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#network">Notre Réseau</a></li>
+                    <li><a href="#csr">RSE</a></li>
+                    <li><a href="#careers">Carrière</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#ebanking" class="nav-cta">e-Banking</a></li>
+                    <li><a href="#" class="nav-cta">Devenir Client</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="brand-banner">
+                        <div class="brand-name">SONIBANK</div>
+                        <div class="brand-slogan">L'ALLIÉE DE VOTRE RÉUSSITE</div>
+                        <div class="brand-sub">SOCIÉTÉ NIGERIENNE DE BANQUE</div>
+                    </div>
+                    <p>
+                        Banque citoyenne et leader au Niger, implantée au Bénin depuis mars 2018.
+                        Nous accompagnons particuliers, entreprises et institutions vers
+                        une croissance inclusive et durable.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">
+                            <i class="fas fa-arrow-right"></i> Ouvrir un compte
+                        </a>
+                        <a href="#services" class="btn-outline">
+                            <i class="fas fa-play-circle"></i> Découvrir nos offres
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><h3>130 000+</h3><p>Clients</p></div>
+                        <div class="stat"><h3>20</h3><p>Agences (Niger)</p></div>
+                        <div class="stat"><h3>1</h3><p>Succursale (Bénin)</p></div>
+                        <div class="stat"><h3>424</h3><p>Collaborateurs</p></div>
+                        <div class="stat"><h3>395 Mds</h3><p>Encours crédits</p></div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-title">💳 So'cash Mastercard</div>
+                        <div class="card-sub">Carte prépayée internationale • 3 ans de validité</div>
+                        <div class="feature-row">
+                            <i class="fas fa-check-circle"></i> Utilisable dans le monde entier
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check-circle"></i> Réseau GIM-UEMOA inclus
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check-circle"></i> Sécurisée et sans compte bancaire
+                        </div>
+                        <div class="card-cta">
+                            <a href="#" class="btn-primary" style="flex:1;justify-content:center;font-size:0.9rem;padding:12px 20px;">
+                                <i class="fas fa-wallet"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT (Qui sommes-nous + succursale) ===== -->
+    <section class="bg-pale" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="img-placeholder">
+                        <h3>SONIBANK</h3>
+                        <p>Société Nigérienne de Banque • Créée le 1er septembre 1990</p>
+                        <p style="margin-top:12px; opacity:0.6; font-size:0.9rem;">
+                            Capital social : 20 milliards FCFA
+                        </p>
+                    </div>
+                    <div class="floating-badge">
+                        <div>
+                            <div class="num">33+</div>
+                            <div class="label">Années d'expertise</div>
+                        </div>
+                        <i class="fas fa-award" style="font-size:2rem;color:var(--secondary);"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Une banque <span>citoyenne</span> depuis 1990</h2>
+                    <div class="highlight-text">
+                        <i class="fas fa-check-circle" style="color:var(--secondary);margin-right:8px;"></i>
+                        Banque d'importance systémique nationale
+                    </div>
+                    <p>
+                        Créée le 1er septembre 1990, la SONIBANK est devenue l'une des principales banques du Niger
+                        avec un capital social de <strong>20 milliards FCFA</strong>. Après plus de 33 ans d'existence,
+                        elle reste fidèle à ses valeurs : culture de l'écoute, respect, qualité de service et
+                        prise en charge personnalisée.
+                    </p>
+                    <p>
+                        <strong>Implantation au Bénin :</strong> Inaugurée le 23 mars 2018, notre succursale de Cotonou
+                        accompagne les particuliers, PME/PMI et grandes entreprises dans leurs projets de développement,
+                        grâce au dynamisme économique du pays et à la présence d'une forte communauté nigérienne.
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> 33+ ans d'expertise</li>
+                        <li><i class="fas fa-check-circle"></i> 20 milliards FCFA de capital</li>
+                        <li><i class="fas fa-check-circle"></i> Succursale au Bénin</li>
+                        <li><i class="fas fa-check-circle"></i> Leader au Niger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIRECTEUR GÉNÉRAL ===== -->
+    <section class="bg-white" id="director">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mot du <span>Directeur Général</span></h2>
+                <p>Une vision pour l'avenir de la banque et de ses clients.</p>
+            </div>
+            <div style="max-width:800px;margin:0 auto;background:var(--primary-pale);padding:40px;border-radius:var(--radius);border-left:6px solid var(--secondary);">
+                <p style="font-size:1.1rem;line-height:1.8;color:var(--text-dark);">
+                    <i class="fas fa-quote-left" style="color:var(--secondary);font-size:1.8rem;margin-right:12px;"></i>
+                    La SONIBANK s'engage à être et rester leader au Niger et à s'ouvrir davantage à l'international.
+                    Notre vision 2022/2024 s'articule autour de 5 axes stratégiques : développement des Ressources Humaines,
+                    rehaussement de la qualité du portefeuille, digitalisation commerciale, maîtrise du risque,
+                    et maintien de la position concurrentielle de leader.
+                </p>
+                <p style="margin-top:16px;font-weight:600;color:var(--primary-dark);">
+                    – M. ABOUBACAR Hamidine, Directeur Général de SONIBANK Bénin
+                </p>
+                <div style="margin-top:20px;display:flex;gap:30px;flex-wrap:wrap;font-size:0.95rem;color:var(--text-light);">
+                    <div><strong>Résultat Net 2022 :</strong> 3 976 millions FCFA</div>
+                    <div><strong>PNB :</strong> 28 835 millions FCFA</div>
+                    <div><strong>Dépôts :</strong> 350 872 millions FCFA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUCCURSALE BÉNIN (prioritaire) ===== -->
+    <section class="bg-pale" id="succursale">
+        <div class="container">
+            <div class="section-title">
+                <h2>Succursale <span>Bénin</span></h2>
+                <p>Notre implantation à Cotonou pour mieux vous servir.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+                <div style="background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow-sm);">
+                    <h3 style="color:var(--primary-dark);margin-bottom:12px;"><i class="fas fa-map-pin" style="color:var(--secondary);margin-right:8px;"></i> Siège social Bénin</h3>
+                    <p><strong>Adresse :</strong> Ganhi immeuble KODEIH, Rue du Gouverneur Bayol, Cotonou</p>
+                    <p><strong>Boîte postale :</strong> 01 BP 8.993 Cotonou-BENIN</p>
+                    <p><strong>Téléphone :</strong> +229 21 31 21 89</p>
+                    <p><strong>Fax :</strong> +229 21 31 44 59</p>
+                    <p><strong>Email :</strong> sonibank.benin@sonibank.com</p>
+                    <p><strong>Directeur Général :</strong> M. ABOUBACAR Hamidine</p>
+                    <p><strong>Date d'ouverture :</strong> Mars 2018</p>
+                </div>
+                <div style="background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow-sm);">
+                    <h3 style="color:var(--primary-dark);margin-bottom:12px;"><i class="fas fa-building" style="color:var(--secondary);margin-right:8px;"></i> Nouveau bureau</h3>
+                    <p><strong>Adresse :</strong> Tokpa, carré 388-389, quartier St Michel</p>
+                    <p><strong>Horaires :</strong> Lundi - Vendredi, 8h - 17h</p>
+                    <hr style="margin:20px 0;border-color:#eef2f6;" />
+                    <p><i class="fas fa-clock" style="color:var(--secondary);margin-right:8px;"></i> Service client disponible 24/7 via notre chatbot et notre ligne téléphonique.</p>
+                    <a href="#contact" class="btn-primary" style="margin-top:16px;display:inline-flex;"><i class="fas fa-phone"></i> Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="bg-white" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos <span>services</span></h2>
+                <p>Des solutions bancaires complètes pour particuliers, professionnels et entreprises.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-user-circle"></i></div>
+                    <h3>Comptes & Épargne</h3>
+                    <p>Compte courant, compte d'épargne, dépôt à terme (DAT). Gérez votre argent en toute simplicité.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Crédits sur mesure</h3>
+                    <p>Immobilier, consommation, événementiel (Ramadan, Tabaski, scolarité) et investissement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Cartes bancaires</h3>
+                    <p>Bukata (10 000 FCFA), Asusu (7 000 FCFA) et So'cash Mastercard (8 000 FCFA) – internationales.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Banque en ligne</h3>
+                    <p>e-Banking, SMS-Banking et Mobile Banking. Consultez, virez et gérez vos comptes à distance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-globe-africa"></i></div>
+                    <h3>Transferts & Garanties</h3>
+                    <p>Transferts rapides, garantie internationale, crédit documentaire, avals et cautions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Bancassurance</h3>
+                    <p>Protégez vos projets et vos proches avec nos offres d'assurance associées aux produits bancaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CARTES BANCAIRES ===== -->
+    <section class="bg-pale" id="cards">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos <span>cartes bancaires</span></h2>
+                <p>Choisissez la carte qui correspond à vos besoins.</p>
+            </div>
+            <table class="cards-table">
+                <thead>
+                    <tr>
+                        <th>Carte</th>
+                        <th>Type</th>
+                        <th>Coût (FCFA)</th>
+                        <th>Validité</th>
+                        <th>Avantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bukata</strong></td>
+                        <td>Retrait (compte chèque)</td>
+                        <td>10 000</td>
+                        <td>1 an</td>
+                        <td>Découvert automatique, réseau GIM-UEMOA</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Asusu</strong></td>
+                        <td>Retrait (compte épargne)</td>
+                        <td>7 000</td>
+                        <td>1 an</td>
+                        <td>Réseau GIM-UEMOA</td>
+                    </tr>
+                    <tr>
+                        <td><strong>So'cash Mastercard</strong></td>
+                        <td>Prépayée internationale</td>
+                        <td>8 000</td>
+                        <td>3 ans</td>
+                        <td>Acceptée dans le monde entier, paiements en ligne sécurisés</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:20px;text-align:center;color:var(--text-light);font-size:0.95rem;">
+                <i class="fas fa-globe-africa" style="color:var(--secondary);"></i> Toutes les cartes sont acceptées dans le réseau GIM-UEMOA (Niger, Côte d'Ivoire, Sénégal, Mali, Bénin, Togo, Guinée Bissau, Burkina Faso).
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== e-Banking ===== -->
+    <section class="bg-white" id="ebanking">
+        <div class="container">
+            <div class="section-title">
+                <h2>e-<span>Banking</span></h2>
+                <p>Votre banque à portée de clic, 24h/24 et 7j/7.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+                <div>
+                    <h3 style="color:var(--primary-dark);margin-bottom:16px;">Services en ligne</h3>
+                    <ul style="list-style:disc;padding-left:24px;color:var(--text-light);font-size:1.05rem;line-height:2;">
+                        <li>Consultation du solde et des mouvements</li>
+                        <li>Relevés d'opérations en temps réel</li>
+                        <li>Virements locaux (ponctuels/permanents)</li>
+                        <li>Virements internationaux</li>
+                        <li>Transfert d'argent</li>
+                        <li>Demande de chéquiers (chèque de banque, opposition)</li>
+                    </ul>
+                    <p style="margin-top:16px;"><strong>Disponible pour :</strong> Particuliers, Entreprise individuelle et Société.</p>
+                    <a href="#" class="btn-primary" style="margin-top:20px;"><i class="fas fa-lock"></i> Accéder à e-Banking</a>
+                </div>
+                <div style="background:var(--primary-pale);padding:40px;border-radius:var(--radius);text-align:center;">
+                    <i class="fas fa-mobile-alt" style="font-size:4rem;color:var(--primary);"></i>
+                    <p style="margin-top:16px;font-weight:600;color:var(--primary-dark);">Mobile Banking & SMS-Banking également disponibles</p>
+                    <p style="color:var(--text-light);">Téléchargez notre application sur Play Store et App Store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RÉSEAU ===== -->
+    <section class="bg-pale" id="network">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre <span>Réseau</span></h2>
+                <p>Une présence au Niger et au Bénin pour vous servir au plus près.</p>
+            </div>
+            <div class="network-grid">
+                <div class="network-card">
+                    <h3><i class="fas fa-flag"></i> Niger</h3>
+                    <ul>
+                        <li><span class="highlight">19 agences</span> et 2 bureaux</li>
+                        <li>Niamey (siège) : Avenue de la Mairie, BP 891</li>
+                        <li>Plusieurs agences dans les principales villes</li>
+                        <li><span class="highlight">37 GAB</span> en service</li>
+                    </ul>
+                </div>
+                <div class="network-card">
+                    <h3><i class="fas fa-flag"></i> Bénin</h3>
+                    <ul>
+                        <li><span class="highlight">1 Succursale</span> à Cotonou</li>
+                        <li>Ganhi immeuble KODEIH, Rue du Gouverneur Bayol</li>
+                        <li><span class="highlight">Nouveau bureau</span> à Tokpa, St Michel</li>
+                        <li>Directeur Général : M. ABOUBACAR Hamidine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RSE (Responsabilité Sociétale) ===== -->
+    <section class="bg-white" id="csr">
+        <div class="container">
+            <div class="section-title">
+                <h2>Responsabilité <span>Sociétale</span></h2>
+                <p>Une banque citoyenne engagée pour le développement durable.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;">
+                <div style="background:var(--primary-pale);padding:24px;border-radius:var(--radius);text-align:center;">
+                    <i class="fas fa-heartbeat" style="font-size:2.5rem;color:var(--secondary);"></i>
+                    <h4 style="margin:12px 0 8px;color:var(--primary-dark);">Santé & Action Sociale</h4>
+                    <p style="font-size:0.95rem;color:var(--text-light);">Financement d'hôpitaux, médicaments, aide aux personnes handicapées.</p>
+                </div>
+                <div style="background:var(--primary-pale);padding:24px;border-radius:var(--radius);text-align:center;">
+                    <i class="fas fa-futbol" style="font-size:2.5rem;color:var(--secondary);"></i>
+                    <h4 style="margin:12px 0 8px;color:var(--primary-dark);">Sport</h4>
+                    <p style="font-size:0.95rem;color:var(--text-light);">Accompagnement des passionnés, amateurs et professionnels.</p>
+                </div>
+                <div style="background:var(--primary-pale);padding:24px;border-radius:var(--radius);text-align:center;">
+                    <i class="fas fa-palette" style="font-size:2.5rem;color:var(--secondary);"></i>
+                    <h4 style="margin:12px 0 8px;color:var(--primary-dark);">Culture & Art</h4>
+                    <p style="font-size:0.95rem;color:var(--text-light);">Sponsoring de publications, jeunes stylistes, défilés de mode.</p>
+                </div>
+                <div style="background:var(--primary-pale);padding:24px;border-radius:var(--radius);text-align:center;">
+                    <i class="fas fa-graduation-cap" style="font-size:2.5rem;color:var(--secondary);"></i>
+                    <h4 style="margin:12px 0 8px;color:var(--primary-dark);">Éducation & Développement</h4>
+                    <p style="font-size:0.95rem;color:var(--text-light);">Mécénat éducatif, bourses, soutien aux écoles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CARRIÈRE ===== -->
+    <section class="bg-pale" id="careers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Carrière à <span>SONIBANK</span></h2>
+                <p>Rejoignez une équipe dynamique et engagée.</p>
+            </div>
+            <div style="max-width:700px;margin:0 auto;text-align:center;">
+                <p style="font-size:1.1rem;color:var(--text-light);">SONIBANK place l'humain au cœur de sa stratégie. Nous recrutons régulièrement des talents pour renforcer nos équipes au Niger et au Bénin.</p>
+                <div style="display:flex;gap:24px;justify-content:center;margin-top:24px;flex-wrap:wrap;">
+                    <div><i class="fas fa-users" style="color:var(--secondary);"></i> <strong>424</strong> collaborateurs</div>
+                    <div><i class="fas fa-handshake" style="color:var(--secondary);"></i> Valeurs : Écoute, Respect, Qualité</div>
+                </div>
+                <a href="#" class="btn-primary" style="margin-top:28px;"><i class="fas fa-paper-plane"></i> Candidature spontanée</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="bg-white" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-<span>nous</span></h2>
+                <p>Une question ? Un projet ? Notre équipe est à votre écoute.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>SONIBANK BÉNIN</h3>
+                    <p>
+                        Notre succursale de Cotonou est à votre disposition pour vous accompagner
+                        dans tous vos projets.
+                    </p>
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div class="text">Siège social Bénin</div>
+                            <div class="sub">Cotonou, Ganhi immeuble KODEIH, Rue du Gouverneur Bayol</div>
+                            <div class="sub" style="margin-top:2px;">01 BP 8.993 Cotonou</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <div class="text">Nouveau bureau</div>
+                            <div class="sub">Tokpa, carré 388-389, quartier St Michel</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="text">+229 21 31 21 89</div>
+                            <div class="sub">Lun - Ven : 8h - 17h</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="text">sonibank.benin@sonibank.com</div>
+                            <div class="sub">Réponse sous 24h</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <div class="text">Directeur Général</div>
+                            <div class="sub">M. ABOUBACAR Hamidine</div>
+                        </div>
+                    </div>
+                    <hr style="margin:20px 0;border-color:#eef2f6;" />
+                    <h4 style="margin-bottom:12px;">Siège Niger</h4>
+                    <div class="detail" style="border-bottom:none;">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <div class="sub">Avenue de la Mairie, BP 891, Niamey</div>
+                            <div class="sub">Tél. : +227 20 73 47 40</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h4>Envoyez-nous un message</h4>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" placeholder="Votre nom" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="votre@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Type de demande</label>
+                            <select id="subject">
+                                <option value="compte">Ouverture de compte</option>
+                                <option value="credit">Demande de crédit</option>
+                                <option value="carte">Carte bancaire</option>
+                                <option value="ebanking">Banque en ligne (e-Banking)</option>
+                                <option value="assurance">Bancassurance</option>
+                                <option value="sav">Réclamation / SAV</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">S</span>
+                        <div>
+                            SONI<span class="highlight">BANK</span>
+                            <span class="sub">L'ALLIÉE DE VOTRE RÉUSSITE</span>
+                        </div>
+                    </a>
+                    <p style="margin-top:8px;">
+                        Société Nigérienne de Banque — Succursale du Bénin.
+                        Banque citoyenne, leader au Niger, engagée pour votre réussite.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>SONIBANK</h5>
+                    <ul>
+                        <li><a href="#about">Qui sommes-nous ?</a></li>
+                        <li><a href="#director">Mot du DG</a></li>
+                        <li><a href="#vision">Vision & valeurs</a></li>
+                        <li><a href="#succursale">Succursale Bénin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#services">Comptes & Épargne</a></li>
+                        <li><a href="#services">Crédits</a></li>
+                        <li><a href="#cards">Cartes</a></li>
+                        <li><a href="#ebanking">e-Banking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Liens utiles</h5>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Carrière</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Plan du site</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SONIBANK BÉNIN — Tous droits réservés.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== CHATBOT ===== -->
+    <button class="chatbot-toggle" id="chatToggle" aria-label="Ouvrir le chatbot">
+        <i class="fas fa-comment-dots"></i>
+        <span class="badge">1</span>
+    </button>
+
+    <div class="chatbot-window" id="chatWindow">
+        <div class="chatbot-header">
+            <div class="left">
+                <div class="avatar">S</div>
+                <div class="info">
+                    <h4>Conseiller SONIBANK</h4>
+                    <p>Commercial &amp; SAV • En ligne</p>
+                </div>
+            </div>
+            <button class="close-btn" id="chatClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Posez votre question..." />
+            <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // ===== NAVBAR =====
+        const header = document.getElementById('header');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-links > li > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const parentLi = this.parentElement;
+                if (parentLi.querySelector('.dropdown-content') && window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    parentLi.classList.toggle('open');
+                }
+            });
+        });
+
+        // Close nav on link click (except dropdown toggles)
+        document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
+
+        // ===== CONTACT FORM =====
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-primary');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Envoyé !';
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    e.target.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // ===== CHATBOT =====
+        const chatToggle = document.getElementById('chatToggle');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatClose = document.getElementById('chatClose');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+
+        const botResponses = {
+            'compte': '📋 <b>Ouverture de compte SONIBANK :</b><br><br>Nous proposons :<br>• <b>Compte courant</b> (avec chéquier)<br>• <b>Compte d\'épargne</b><br>• <b>Dépôt à terme (DAT)</b><br><br>📌 <b>Pièces à fournir :</b> pièce d\'identité, photo, justificatif de domicile, 3 derniers bulletins de salaire (pour les particuliers).<br><br>✅ <b>Offre spéciale Bénin :</b> 0 frais de tenue de compte pendant 6 mois !',
+            'credit': '🏦 <b>Nos solutions de crédit :</b><br>• <b>Crédit immobilier</b> — jusqu\'à 100 millions FCFA<br>• <b>Crédit à la consommation</b> — jusqu\'à 10 millions FCFA<br>• <b>Crédit événementiel</b> (Ramadan, Tabaski, scolarité)<br>• <b>Crédit d\'investissement</b> pour entreprises<br>• <b>Avance sur marché / facilité de caisse</b><br><br>📞 Contactez notre service commercial pour une étude personnalisée.',
+            'carte': '💳 <b>Nos cartes bancaires :</b><br><br>• <b>Bukata</b> (10 000 FCFA) — Carte de retrait sur compte chèque, découvert automatique.<br>• <b>Asusu</b> (7 000 FCFA) — Carte de retrait sur compte épargne.<br>• <b>So\'cash Mastercard</b> (8 000 FCFA) — Carte prépayée internationale, valable 3 ans, acceptée dans le monde entier et sur le réseau GIM-UEMOA.<br><br>Commandez votre carte en agence ou en ligne.',
+            'ebanking': '💻 <b>Banque en ligne (e-Banking) :</b><br><br>• Consultation du solde et des mouvements<br>• Relevés d\'opérations en temps réel<br>• Virements locaux (ponctuels/permanents)<br>• Virements internationaux<br>• Transfert d\'argent<br>• Demande de chéquiers (chèque de banque, opposition)<br><br>📱 Disponible aussi en <b>SMS-Banking</b> et <b>Mobile Banking</b>.',
+            'assurance': '🛡️ <b>Bancassurance SONIBANK :</b><br><br>Protégez vos projets et vos proches :<br>• Assurance vie<br>• Assurance santé<br>• Assurance automobile<br>• Assurance habitation<br><br>Un conseiller vous accompagne dans le choix de la formule adaptée à vos besoins.',
+            'transfert': '🌍 <b>Transferts & Garanties :</b><br><br>• Transferts rapides (national et international)<br>• Garantie internationale<br>• Crédit documentaire<br>• Remise documentaire<br>• Avals et cautions<br><br>Nos solutions sont conçues pour faciliter vos échanges commerciaux.',
+            'sav': '🆘 <b>Service Client SONIBANK BÉNIN :</b><br><br>• 📞 <b>Téléphone :</b> +229 21 31 21 89 (Lun-Ven, 8h-17h)<br>• 📧 <b>Email :</b> sonibank.benin@sonibank.com<br>• 📍 <b>Agence :</b> Cotonou, Ganhi immeuble KODEIH<br><br>Notre équipe SAV est à votre disposition pour toute réclamation ou assistance.',
+            'bloquage': '🔒 <b>Opposition / Carte bloquée ?</b><br><br>Pas de panique ! Vous pouvez :<br>1. Appeler notre service client au <b>+229 21 31 21 89</b> (option 2)<br>2. Vous rendre dans notre agence de Cotonou avec votre pièce d\'identité<br>3. Si vous êtes au Niger, composer le 21 30 00 00<br><br>Nous traitons les demandes en urgence sous 15 minutes.',
+            'frais': '💰 <b>Frais bancaires (Bénin) :</b><br>• Tenue de compte : à partir de 1 500 FCFA/mois<br>• Retrait SONIBANK : gratuit<br>• Retrait autre banque (UEMOA) : 500 FCFA<br>• Virement national : 250 FCFA<br>• Virement international : selon montant<br><br>Les frais sont réduits de 50% pour les clients Gold.',
+            'histoire': '📜 <b>SONIBANK : 33 ans d\'excellence</b><br><br>Créée le 1er septembre 1990, la Société Nigérienne de Banque est une banque d\'importance systémique nationale. Avec un capital social de <b>20 milliards FCFA</b>, elle est leader au Niger.<br><br>Au Bénin, notre succursale a été inaugurée le <b>23 mars 2018</b> pour accompagner le dynamisme économique du pays et la communauté nigérienne (1,2 million de personnes).<br><br>Vision : « Être et rester leader au Niger et s\'ouvrir davantage à l\'international ».',
+            'hello': '👋 Bonjour ! Je suis le conseiller virtuel de <b>SONIBANK BÉNIN</b>.<br><br>Je peux vous renseigner sur :<br>• 📋 Comptes & Épargne<br>• 💰 Crédits sur mesure<br>• 💳 Cartes (Bukata, Asusu, So\'cash)<br>• 💻 e-Banking & Mobile Banking<br>• 🛡️ Bancassurance<br>• 🆘 Service client (SAV)<br><br>Posez-moi votre question en quelques mots !',
+            'default': '🙏 Merci pour votre message. Notre équipe commerciale ou SAV vous répond dans les plus brefs délais.<br><br>💡 <i>Conseil :</i> Utilisez des mots-clés comme <b>"compte"</b>, <b>"carte"</b>, <b>"crédit"</b>, <b>"e-banking"</b> ou <b>"sav"</b> pour une réponse plus précise.<br><br>📞 Vous pouvez aussi nous appeler au <b>+229 21 31 21 89</b>.'
+        };
+
+        const quickReplies = [
+            { text: '📋 Ouvrir un compte', key: 'compte' },
+            { text: '💳 Cartes (Bukata, So\'cash)', key: 'carte' },
+            { text: '💰 Crédit immobilier', key: 'credit' },
+            { text: '💻 e-Banking', key: 'ebanking' },
+            { text: '🆘 SAV / Réclamation', key: 'sav' },
+            { text: '📜 Histoire de la banque', key: 'histoire' },
+        ];
+
+        let isOpen = false;
+
+        function toggleChat() {
+            isOpen = !isOpen;
+            chatWindow.classList.toggle('open', isOpen);
+            if (isOpen && chatMessages.children.length === 0) {
+                addBotMessage('👋 Bonjour et bienvenue à <b>SONIBANK BÉNIN</b> !<br><br>Je suis votre conseiller virtuel. Je suis là pour vous aider avec toutes vos questions bancaires : comptes, crédits, cartes (Bukata, Asusu, So\'cash), e-Banking, ou toute demande SAV.<br><br>Comment puis-je vous assister aujourd\'hui ?');
+                showQuickReplies();
+            }
+            document.querySelector('.chatbot-toggle .badge')?.remove();
+        }
+
+        chatToggle.addEventListener('click', toggleChat);
+        chatClose.addEventListener('click', toggleChat);
+
+        function sendMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            addUserMessage(text);
+            chatInput.value = '';
+            chatInput.focus();
+            addTypingIndicator();
+            setTimeout(() => {
+                removeTypingIndicator();
+                const response = getBotResponse(text);
+                addBotMessage(response);
+                showQuickReplies();
+                scrollToBottom();
+            }, 600 + Math.random() * 800);
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+        chatMessages.addEventListener('click', (e) => {
+            const btn = e.target.closest('.qr-btn');
+            if (btn) {
+                const key = btn.dataset.key;
+                addUserMessage(btn.textContent.trim());
+                document.querySelectorAll('.quick-replies').forEach(el => el.remove());
+                addTypingIndicator();
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    const response = getBotResponse(key);
+                    addBotMessage(response);
+                    showQuickReplies();
+                    scrollToBottom();
+                }, 500 + Math.random() * 600);
+            }
+        });
+
+        function addUserMessage(text) {
+            const div = document.createElement('div');
+            div.className = 'msg user';
+            div.innerHTML = text + `<span class="time">${getTime()}</span>`;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+
+        function addBotMessage(html) {
+            const div = document.createElement('div');
+            div.className = 'msg bot';
+            div.innerHTML = html + `<span class="time">${getTime()}</span>`;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+
+        function addTypingIndicator() {
+            const div = document.createElement('div');
+            div.className = 'msg bot';
+            div.id = 'typingIndicator';
+            div.innerHTML = `<div class="typing-dots"><span></span><span></span><span></span></div>`;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+
+        function removeTypingIndicator() {
+            document.getElementById('typingIndicator')?.remove();
+        }
+
+        function showQuickReplies() {
+            document.querySelectorAll('.quick-replies').forEach(el => el.remove());
+            const container = document.createElement('div');
+            container.className = 'quick-replies';
+            quickReplies.forEach(qr => {
+                const btn = document.createElement('button');
+                btn.className = 'qr-btn';
+                btn.textContent = qr.text;
+                btn.dataset.key = qr.key;
+                container.appendChild(btn);
+            });
+            chatMessages.appendChild(container);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getTime() {
+            const now = new Date();
+            return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+        }
+
+        function getBotResponse(input) {
+            const lower = input.toLowerCase();
+            if (lower.includes('compte') || lower.includes('ouvrir') || lower.includes('ouverture') || lower.includes('épargne') ||
+                lower.includes('epargne') || lower.includes('dat')) return botResponses['compte'];
+            if (lower.includes('credit') || lower.includes('prêt') || lower.includes('finance') || lower.includes('emprunt') || lower
+                .includes('immobilier') || lower.includes('consommation') || lower.includes('ramadan') || lower.includes(
+                    'tabaski')) return botResponses['credit'];
+            if (lower.includes('carte') || lower.includes('bukata') || lower.includes('asusu') || lower.includes('socash') ||
+                lower.includes('so\'cash') || lower.includes('paiement') || lower.includes('retrait')) return botResponses[
+                'carte'];
+            if (lower.includes('eban') || lower.includes('online') || lower.includes('internet') || lower.includes('mobile') ||
+                lower.includes('application') || lower.includes('sms') || lower.includes('virement')) return botResponses[
+                'ebanking'];
+            if (lower.includes('assurance') || lower.includes('protection') || lower.includes('santé') || lower.includes('vie') ||
+                lower.includes('habitation') || lower.includes('auto')) return botResponses['assurance'];
+            if (lower.includes('transfert') || lower.includes('garantie') || lower.includes('aval') || lower.includes(
+                'caution') || lower.includes('documentaire') || lower.includes('international')) return botResponses[
+                'transfert'];
+            if (lower.includes('sav') || lower.includes('service client') || lower.includes('réclamation') || lower.includes(
+                'support') || lower.includes('aide')) return botResponses['sav'];
+            if (lower.includes('bloqu') || lower.includes('perdu') || lower.includes('vol') || lower.includes('opposition') ||
+                lower.includes('urgence')) return botResponses['bloquage'];
+            if (lower.includes('frais') || lower.includes('tarif') || lower.includes('coût') || lower.includes('prix') || lower
+                .includes('tenue')) return botResponses['frais'];
+            if (lower.includes('histoire') || lower.includes('1990') || lower.includes('création') || lower.includes('leader') ||
+                lower.includes('niger') || lower.includes('capital')) return botResponses['histoire'];
+            if (lower.includes('bonjour') || lower.includes('salut') || lower.includes('hello') || lower.includes('bonsoir') ||
+                lower.includes('hey') || lower.includes('coucou')) return botResponses['hello'];
+            return botResponses['default'];
+        }
+
+        // Auto-open
+        let hasAutoOpened = false;
+        setTimeout(() => {
+            if (!hasAutoOpened && !isOpen) {
+                hasAutoOpened = true;
+                toggleChat();
+            }
+        }, 3000);
+
+        document.addEventListener('click', (e) => {
+            if (isOpen) {
+                const target = e.target;
+                if (!chatWindow.contains(target) && target !== chatToggle && !chatToggle.contains(target)) {
+                    toggleChat();
+                }
+            }
+        });
+
+        console.log('🏦 SONIBANK BÉNIN — Site complet avec toutes les pages et liens.');
+    </script>
+</body>
+</html>
