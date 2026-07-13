@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SONIBANK BÉNIN. — L'alliée de votre réussite</title>
+    <title>SONIBANK BÉNIN — L'alliée de votre réussite</title>
     <meta name="description" content="SONIBANK Bénin, succursale de la Société Nigérienne de Banque. Banque citoyenne et leader au Niger, implantée au Bénin depuis 2018. Comptes, crédits, cartes, e-banking et conseils personnalisés." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -290,7 +290,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            padding: 80px 0 60px;
+            padding: 40px 0 60px;
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
             position: relative;
             overflow: hidden;
@@ -482,6 +482,122 @@
         }
         .bg-white {
             background: var(--white);
+        }
+
+        /* ===== CARROUSEL (SUPER MODERNE) ===== */
+        .carousel-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+            height: 520px;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .carousel-slide .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 50px 60px;
+            background: linear-gradient(to top, rgba(8, 74, 107, 0.9) 0%, transparent 100%);
+            color: var(--white);
+        }
+        .carousel-slide .slide-caption h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .carousel-slide .slide-caption p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        }
+        .carousel-slide .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(11, 110, 153, 0.15);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            transition: var(--transition);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .carousel-btn:hover {
+            background: var(--white);
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+        .carousel-btn.prev {
+            left: 20px;
+        }
+        .carousel-btn.next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+        .carousel-indicators .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        .carousel-indicators .dot.active {
+            background: var(--secondary);
+            transform: scale(1.2);
+            border-color: var(--white);
+        }
+        .carousel-indicators .dot:hover {
+            background: rgba(255, 255, 255, 0.8);
         }
 
         /* ===== ABOUT ===== */
@@ -1190,6 +1306,15 @@
             .nav-links>li.open .dropdown-content {
                 display: block;
             }
+            .carousel-slide {
+                height: 400px;
+            }
+            .carousel-slide .slide-caption h3 {
+                font-size: 1.6rem;
+            }
+            .carousel-slide .slide-caption p {
+                font-size: 1rem;
+            }
         }
         @media (max-width: 768px) {
             .nav-links {
@@ -1258,6 +1383,29 @@
                 height: 56px;
                 font-size: 1.5rem;
             }
+            .carousel-slide {
+                height: 320px;
+            }
+            .carousel-slide .slide-caption {
+                padding: 24px 30px;
+            }
+            .carousel-slide .slide-caption h3 {
+                font-size: 1.3rem;
+            }
+            .carousel-slide .slide-caption p {
+                font-size: 0.9rem;
+            }
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .carousel-btn.prev {
+                left: 10px;
+            }
+            .carousel-btn.next {
+                right: 10px;
+            }
             .cards-table {
                 font-size: 0.85rem;
             }
@@ -1289,6 +1437,18 @@
             .hero-card {
                 padding: 24px;
             }
+            .carousel-slide {
+                height: 250px;
+            }
+            .carousel-slide .slide-caption {
+                padding: 16px 20px;
+            }
+            .carousel-slide .slide-caption h3 {
+                font-size: 1rem;
+            }
+            .carousel-slide .slide-caption p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -1307,7 +1467,6 @@
                 </a>
 
                 <ul class="nav-links" id="navLinks">
-                    <!-- SONIBANK dropdown -->
                     <li>
                         <a href="#about">SONIBANK <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
@@ -1318,7 +1477,6 @@
                             <li><a href="#succursale">Succursale (Bénin)</a></li>
                         </ul>
                     </li>
-                    <!-- Produits & Services dropdown -->
                     <li>
                         <a href="#services">Produits & Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
@@ -1402,7 +1560,86 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT (Qui sommes-nous + succursale) ===== -->
+    <!-- ===== CARROUSEL ===== -->
+    <section class="carousel-section" id="carousel">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ils nous <span>font confiance</span></h2>
+                <p>Découvrez pourquoi des milliers de clients choisissent SONIBANK chaque jour.</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-service.jpg" alt="Conseillère bancaire assiste un client">
+                        <div class="slide-caption">
+                            <h3>Un service d'excellence</h3>
+                            <p>Nos conseillers sont à vos côtés pour vous offrir un accompagnement personnalisé.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-success.jpg" alt="Homme d'affaires confiant">
+                        <div class="slide-caption">
+                            <h3>La confiance au cœur de notre relation</h3>
+                            <p>Des solutions bancaires qui vous accompagnent vers la réussite.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-family.jpg" alt="Famille heureuse avec ordinateur">
+                        <div class="slide-caption">
+                            <h3>Une banque pour toute la famille</h3>
+                            <p>Des produits adaptés à chaque étape de votre vie.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-team.jpg" alt="Équipe professionnelle en réunion">
+                        <div class="slide-caption">
+                            <h3>Des équipes à votre écoute</h3>
+                            <p>Un réseau de professionnels dédiés à votre réussite.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-couple.jpg" alt="Couple avec carte bancaire">
+                        <div class="slide-caption">
+                            <h3>Des solutions innovantes</h3>
+                            <p>La banque digitale au service de vos projets.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="carousel-slide">
+                        <div class="slide-overlay"></div>
+                        <img src="images/slide-modern.jpg" alt="Banque moderne et technologie">
+                        <div class="slide-caption">
+                            <h3>La banque de demain</h3>
+                            <p>Des services digitaux pour une expérience client unique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="carousel-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Indicateurs -->
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
     <section class="bg-pale" id="about">
         <div class="container">
             <div class="about-grid">
@@ -1477,7 +1714,7 @@
         </div>
     </section>
 
-    <!-- ===== SUCCURSALE BÉNIN (prioritaire) ===== -->
+    <!-- ===== SUCCURSALE BÉNIN ===== -->
     <section class="bg-pale" id="succursale">
         <div class="container">
             <div class="section-title">
@@ -1656,7 +1893,7 @@
         </div>
     </section>
 
-    <!-- ===== RSE (Responsabilité Sociétale) ===== -->
+    <!-- ===== RSE ===== -->
     <section class="bg-white" id="csr">
         <div class="container">
             <div class="section-title">
@@ -1911,7 +2148,6 @@
             });
         });
 
-        // Close nav on link click (except dropdown toggles)
         document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
@@ -1933,6 +2169,101 @@
                     e.target.reset();
                 }, 2000);
             }, 1500);
+        });
+
+        // ===== CARROUSEL =====
+        const track = document.getElementById('carouselTrack');
+        const slides = track.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.getElementById('indicators');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let autoPlayInterval;
+
+        // Créer les indicateurs
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'dot' + (index === 0 ? ' active' : '');
+            dot.dataset.index = index;
+            dot.addEventListener('click', () => goToSlide(index));
+            indicators.appendChild(dot);
+        });
+
+        const dots = indicators.querySelectorAll('.dot');
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentIndex = index;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        // Événements des boutons
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        // Auto-play
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        startAutoPlay();
+
+        // Pause au survol
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Support tactile pour mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const threshold = 50;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+                resetAutoPlay();
+            }
         });
 
         // ===== CHATBOT =====
@@ -2120,7 +2451,7 @@
             }
         });
 
-        console.log('🏦 SONIBANK BÉNIN — Site complet avec toutes les pages et liens.');
+        console.log('🏦 SONIBANK BÉNIN — Site avec carrousel premium intégré !');
     </script>
 </body>
 </html>
